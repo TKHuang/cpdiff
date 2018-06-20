@@ -9,7 +9,7 @@ Install
 `python setup.py install`
 
 ```shell
-$ python -m cpdiff -h
+$ cpdiff -h
 usage: __main__.py [-h] [-p] [-s START] [-e END] -o OUT [-r ROOT]
 
 Copy files need to be update between commits.
@@ -26,23 +26,23 @@ optional arguments:
 
 - By default copydiff compares last one commit to filter files.
 
-        $ python -m cpdiff -o 'C:\yourpath'
+        $ cpdiff -o 'C:\yourpath'
 
         equals
 
-        $ python -m cpdiff -s HEAD~1 -e HEAD -o 'C:\yourpath'
+        $ cpdiff -s HEAD~1 -e HEAD -o 'C:\yourpath'
 
         or use commit sha1
 
-        $ python -m cpdiff -s {commit-sha1} -e HEAD -o 'C:\yourpath'
+        $ cpdiff -s {commit-sha1} -e HEAD -o 'C:\yourpath'
 
 - Compare to last 6 commit.
 
-        $ python -m cpdiff -o 'C:\yourpath' --start HEAD~6
+        $ cpdiff -o 'C:\yourpath' --start HEAD~6
 
 - Preview what will be copied.
 
-        $ python -m cpdiff -o 'C:\yourpath' --start HEAD~6 --preview
+        $ cpdiff -o 'C:\yourpath' --start HEAD~6 --preview
 
         [{'dst': WindowsPath('C:/yourpath/commit3'), 'src': WindowsPath('commit3')},
         {'dst': WindowsPath('C:/yourpath/gg/22222'), 'src': WindowsPath('gg/22222')},
